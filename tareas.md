@@ -15,7 +15,7 @@
         - [x] Actualizar README.md con el concepto filosófico.
         - [x] Renombrar proyecto a `bluecore` en `package.json`.
         - [x] Inicializar repositorio Git y crear `.gitignore`.
-        - [ ] Crear repositorio en GitHub y enlazarlo.
+        - [x] Crear repositorio en GitHub y enlazarlo.
     - [ ] CV
     - [ ] Buscar y analizar otros proyectos nuevos para subir.
 3.  [ ] **Configurar Entorno Windows:** Una vez todo esté respaldado, empezar a configurar y probar el flujo de trabajo desde Windows.

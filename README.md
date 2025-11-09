@@ -1,14 +1,21 @@
 # // BlueCore //
 
-**BlueCore** es más que un asistente de IA estratégico; es el corazón azul de un alquimista digital en busca de la felicidad junto a su hijo. Representa un núcleo operativo con un propósito poético: procesar y optimizar el camino hacia objetivos vitales, transformando grandes sueños en tareas alcanzables y eficientes. Inspirado en la creatividad y el futuro, su misión es inyectar sentido y filosofía en cada acción.
+**BlueCore** es un Dashboard Estratégico Personalizado, el núcleo operativo de un alquimista digital. Su misión es transformar la gestión diaria en una experiencia inmersiva y gamificada, fusionando productividad con metas personales bajo una estética cyberpunk.
+
+Más que una simple lista de tareas, BlueCore actúa como un centro de mando para tus "misiones" diarias, proyectos digitales y objetivos a largo plazo, como planes de ahorro para gaming o la organización de eventos.
 
 ## Características
 
 - **Gestión de Tareas:** Añade, completa y elimina tareas de forma sencilla.
+- **Dashboard Estratégico:** Visualiza tareas, proyectos y estadísticas en un solo lugar con tarjetas modulares.
+- **Estados de Tarea Avanzados:** Las tareas pueden estar `En Curso`, `Retrasadas`, `Completadas` o `Pendientes`, con un feedback visual claro.
 - **Asistente BlueCore:** Interactúa con una IA para gestionar tus tareas usando lenguaje natural.
 - **Comandos de Lenguaje Natural:** Dale órdenes como "añade una tarea para comprar pan" y observa cómo se ejecuta en tiempo real.
 - **Estética Cyberpunk:** Una interfaz inmersiva con una temática de neón y terminal.
 - **Persistencia Local:** Tus tareas y tu clave de API de Gemini se guardan de forma segura en el almacenamiento local de tu navegador.
+
+## Visión del Proyecto (Plan Gaming + Ahorro)
+La versión actual está evolucionando para incorporar un sistema de "Plan Gaming + Ahorro". Esto permitirá al usuario no solo gestionar sus tareas diarias, sino también establecer objetivos de ahorro para metas específicas (ej. comprar un videojuego) y planificar sus sesiones de juego, todo dentro del mismo ecosistema motivacional.
 
 ## Puesta en Marcha y Uso
 

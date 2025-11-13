@@ -4,6 +4,59 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog.
 
+## [1.5.0] - 2025-11-14
+
+### Added
+- **Sistema de Navegación Multi-página**: Integrado `react-router-dom` para permitir la navegación entre distintas vistas de la aplicación.
+- **Página "Carta para Mamá"**: Creado un nuevo componente y ruta (`/carta-a-mama`) para una carta personal, con un diseño cuidado y emotivo.
+- **Nuevo Componente `Header.jsx`**: Desarrollada una cabecera completamente nueva y sofisticada que actúa como el centro de mando visual.
+- **Nueva Fuente 'Russo One'**: Añadida para dar al logo de BlueCore una identidad visual más fuerte y con más cuerpo.
+
+### Changed
+- **Rediseño Completo de la Interfaz (UI Overhaul)**: La aplicación ha sido rediseñada para tener un aspecto más elegante y elaborado, similar a un "Heads-Up Display" (HUD).
+- **Cabecera Animada**: El logo de "BlueCore" ahora tiene una animación de parpadeo neón y los botones de navegación tienen efectos "galácticos" interactivos.
+- **Rediseño de Tarjetas de Proyecto**: Las tarjetas de los proyectos ahora son más detalladas, incluyendo descripciones, iconos para subtareas y una estética más pulida.
+
+### Removed
+- Se ha eliminado el componente `ProjectItem.jsx`, integrando su lógica directamente en `App.jsx` para un mayor control del nuevo diseño.
+
+## [1.4.0] - 2025-11-12
+
+### Added
+- **Proyecto "Diario de Papá"**: Se ha incorporado un nuevo y profundo proyecto estratégico. Su objetivo es crear un legado en forma de IA, una réplica de la personalidad del padre para su hijo, asegurando que su guía y esencia perduren.
+- **Archivo `Antologia-del-Alma.md`**: Creado un diario digital para documentar pensamientos y emociones, sirviendo como la fuente de datos principal para el proyecto "Diario de Papá".
+
+### Changed
+- **Evolución Filosófica**: El propósito de BlueCore se ha expandido. Ya no es solo una herramienta de productividad, sino también un crisol para forjar un legado digital y personal.
+- **Actualización de `README.md`**: El README ahora incluye una sección de "Evolución del Proyecto" para documentar su viaje conceptual y filosófico.
+
+## [1.3.0] - 2025-11-11
+
+### Added
+- **Gestión de Deudas:** Se ha creado una nueva sección dedicada para visualizar todas las deudas y préstamos, con un totalizador automático.
+- **Foco Inmediato:** Añadida una tarjeta de "Foco Inmediato" con un estilo visual de alerta (rojo y con animación de pulso) para destacar las tareas más urgentes.
+- **Nuevos Proyectos:** Incorporados los proyectos "Antología" y "Pulseras (Tienda Online)" a la estructura de datos.
+
+### Changed
+- **Reestructuración Estratégica:** La arquitectura de la información ha sido completamente rediseñada. Las tareas ahora se agrupan por prioridad estratégica (`Foco Ingresos`, `Proyectos Estratégicos`, `Mantenimiento`) en lugar de por tipo, para alinear cada acción con la misión principal.
+- **Misión Principal en UI:** El objetivo principal ("Viajar a Colombia...") ahora se muestra permanentemente en la cabecera de la aplicación como un recordatorio constante.
+- **Estilos Neón Mejorados:** Se ha intensificado el efecto de brillo "radiactivo" en los títulos para potenciar la estética cyberpunk.
+
+### Fixed
+- **Cálculo Total Deudas:** Corregido el cálculo manual del total de deudas en el componente `App.jsx` para que se calcule dinámicamente a partir de los datos, asegurando que siempre esté actualizado.
+
+## [1.3.0] - 2025-11-11
+
+### Added
+- **Gestión de Deudas:** Se ha creado una nueva sección dedicada para visualizar todas las deudas y préstamos, con un totalizador automático.
+- **Foco Inmediato:** Añadida una tarjeta de "Foco Inmediato" con un estilo visual de alerta (rojo y con animación de pulso) para destacar las tareas más urgentes.
+- **Nuevos Proyectos:** Incorporados los proyectos "Antología" y "Pulseras (Tienda Online)" a la estructura de datos.
+
+### Changed
+- **Reestructuración Estratégica:** La arquitectura de la información ha sido completamente rediseñada. Las tareas ahora se agrupan por prioridad estratégica (`Foco Ingresos`, `Proyectos Estratégicos`, `Mantenimiento`) en lugar de por tipo, para alinear cada acción con la misión principal.
+- **Misión Principal en UI:** El objetivo principal ("Viajar a Colombia...") ahora se muestra permanentemente en la cabecera de la aplicación como un recordatorio constante.
+- **Estilos Neón Mejorados:** Se ha intensificado el efecto de brillo "radiactivo" en los títulos para potenciar la estética cyberpunk.
+
 ## [1.2.0] - 2025-11-09
 
 ### Added

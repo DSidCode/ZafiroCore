@@ -21,3 +21,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Archivos personales y privados
+deudas.xlsx
+08371df3-9b12-44a5-842d-4d4dc9ec786d.jpeg

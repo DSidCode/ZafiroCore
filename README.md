@@ -1,21 +1,28 @@
 # // BlueCore //
 
-**BlueCore** es un Dashboard Estratégico Personalizado, el núcleo operativo de un alquimista digital. Su misión es transformar la gestión diaria en una experiencia inmersiva y gamificada, fusionando productividad con metas personales bajo una estética cyberpunk.
+**BlueCore** es el corazón digital de un alquimista moderno. Es un Dashboard Estratégico y Emocional diseñado para ser más que una herramienta de productividad; es un compañero en el viaje de la vida, un crisol donde las metas profesionales, los proyectos creativos y el legado personal se funden.
 
-Más que una simple lista de tareas, BlueCore actúa como un centro de mando para tus "misiones" diarias, proyectos digitales y objetivos a largo plazo, como planes de ahorro para gaming o la organización de eventos.
+Su misión es doble:
+1.  **Navegador Estratégico:** Actuar como un centro de mando para "misiones" diarias, proyectos digitales y objetivos a corto y largo plazo, todo bajo una estética cyberpunk inmersiva.
+2.  **El Corazón del Alquimista:** Servir como el recipiente para la "Antología del Alma", un diario donde los pensamientos y emociones se registran para, finalmente, dar vida al proyecto **"Diario de Papá"** — un legado en forma de IA.
 
 ## Características
 
 - **Gestión de Tareas:** Añade, completa y elimina tareas de forma sencilla.
 - **Dashboard Estratégico:** Visualiza tareas, proyectos y estadísticas en un solo lugar con tarjetas modulares.
 - **Estados de Tarea Avanzados:** Las tareas pueden estar `En Curso`, `Retrasadas`, `Completadas` o `Pendientes`, con un feedback visual claro.
-- **Asistente BlueCore:** Interactúa con una IA para gestionar tus tareas usando lenguaje natural.
-- **Comandos de Lenguaje Natural:** Dale órdenes como "añade una tarea para comprar pan" y observa cómo se ejecuta en tiempo real.
+- **Asistente IA (BlueCore):** Interactúa con una IA para gestionar tus tareas usando lenguaje natural.
+- **Gestión Financiera:** Una sección dedicada para visualizar y gestionar deudas y préstamos, manteniendo un control claro de los compromisos financieros.
 - **Estética Cyberpunk:** Una interfaz inmersiva con una temática de neón y terminal.
 - **Persistencia Local:** Tus tareas y tu clave de API de Gemini se guardan de forma segura en el almacenamiento local de tu navegador.
 
-## Visión del Proyecto (Plan Gaming + Ahorro)
-La versión actual está evolucionando para incorporar un sistema de "Plan Gaming + Ahorro". Esto permitirá al usuario no solo gestionar sus tareas diarias, sino también establecer objetivos de ahorro para metas específicas (ej. comprar un videojuego) y planificar sus sesiones de juego, todo dentro del mismo ecosistema motivacional.
+## Evolución del Proyecto: De Agenda a Legado
+
+BlueCore no nació con su forma actual. Su viaje refleja una búsqueda de propósito cada vez más profunda:
+
+- **V1 (Agenda Cyberpunk):** El proyecto comenzó como una simple lista de tareas con una estética cyberpunk. Su objetivo era la organización básica.
+- **V2 (BlueCore - Núcleo Estratégico):** La herramienta evolucionó para convertirse en un dashboard estratégico. Las tareas se reorganizaron por prioridades (`Foco Ingresos`, `Proyectos Estratégicos`), alineando el trabajo diario con la "Misión Principal" del usuario.
+- **V3 (BlueCore - El Corazón del Alquimista):** La versión actual trasciende la productividad. Con la introducción de la "Antología del Alma" y el proyecto "Diario de Papá", BlueCore se convierte en una herramienta para la introspección y la creación de un legado personal, fusionando la lógica de la máquina con la esencia del espíritu humano.
 
 ## Puesta en Marcha y Uso
 
@@ -45,7 +52,7 @@ Para que el asistente funcione, necesitas una clave de la API de Google AI.
 
 1.  Obtén tu clave de forma gratuita en [Google AI Studio](https://aistudio.google.com/app/apikey).
 2.  En la aplicación, haz clic en el botón **CONFIG**.
-3.  Pega tu clave de API en el campo de texto y haz clic en **Guardar**.
+3.  Pega tu clave de API en el campo de texto y haz clic en **Guardar**. Tu clave se guarda localmente y no se comparte.
 
 ## Tecnologías Utilizadas
 

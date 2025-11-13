@@ -1,0 +1,9 @@
+Tipo,Fecha,Concepto,Categoria,Ingreso,Gasto,Notas
+Ingreso,2025-11-10,"Salario Bar",Hostelería,800,0,"Salario base mensual"
+Gasto,2025-11-11,"Alquiler Habitación",Vivienda,0,450,"Pago mensual"
+Gasto,2025-11-12,"Compra Supermercado",Alimentación,0,75,"Compra semanal"
+Ingreso,2025-11-15,"Diseño QR Mamarrachos",Freelance,50,0,"Primer proyecto CyberMadrid"
+Gasto,2025-11-20,"Material Pulseras",Inversión,0,60,"Compra inicial Miyuki"
+Gasto,2025-11-25,"Abono Deuda Moni",Deudas,0,40,"Pago parcial"
+Proyección,2025-12-01,"Objetivo Ingresos Freelance",Metas,1000,0,"Meta mensual para viaje"
+Proyección,2025-12-15,"Ahorro Viaje Colombia",Metas,0,500,"Ahorro estimado para el viaje"

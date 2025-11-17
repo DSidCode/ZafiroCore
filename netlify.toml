@@ -1,0 +1,10 @@
+# Configuración de Build para Netlify
+[build]
+  command = "npm run build" # El comando que Netlify ejecutará para construir tu sitio
+  publish = "dist"          # La carpeta que Netlify desplegará
+
+# Redirección para Single Page Applications (SPA) como React
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

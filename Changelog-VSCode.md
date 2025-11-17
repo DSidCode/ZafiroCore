@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog.
 
+## [1.7.0] - 2025-11-14
+
+### Added
+- **Concepto de Actualización de Estado de Proyecto**: Se ha introducido la idea de añadir un campo de "última actualización" a cada proyecto. El objetivo es poder registrar el progreso más reciente de cada "nodo" del ecosistema, facilitando la toma de decisiones y la visión estratégica general. Esta tarea se ha añadido a `tareas.md` y el concepto se ha documentado en el `README.md`.
+
+## [1.6.0] - 2025-11-15
+
+### Changed
+- **Evolución Filosófica (El Ecosistema Quimérico)**: Se ha formalizado un nuevo paradigma conceptual para el proyecto. BlueCore ya no es una aplicación monolítica, sino el núcleo de un ecosistema donde cada proyecto individual (`CyberMadrid`, `Danisid.com`, etc.) es concebido como un "nodo" o "departamento" especializado. Esta visión "Quimérica" permite una estrategia de refactorización constante y una evolución simbiótica y mutante de todas las partes del sistema. Esta idea se ha documentado en el `README.md`.
+
 ## [1.5.0] - 2025-11-14
 
 ### Added

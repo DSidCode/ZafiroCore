@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import './index.css';
 import Card from './components/Card';
 import CartaParaMama from './components/CartaParaMama';
+import PlanDeAccion from './components/PlanDeAccion';
 import Header from './components/Header';
 
 
@@ -11,37 +12,67 @@ const initialData = {
   // Proyectos que generan ingresos directos o son la base para ello.
   incomeFocus: [
     { id: 8, name: '📢 CyberMadrid ADS', status: 'Planificación', description: 'Plataforma marketing para vida nocturna', subTasks: [
-      { text: 'Definir servicios (cartelería, ads) ⏳', completed: false },
-      { text: 'Crear portfolio visual ⏳', completed: false },
-      { text: '💳 Diseñar tarjeta de visita digital ⏳', completed: false },
-      { text: 'Buscar primeros clientes ⏳', completed: false },
-    ]},
-    { id: 14, name: '💎 Proyecto Pulseras (Tienda Online)', status: 'Ideación', description: 'E-commerce de pulseras artesanales', subTasks: [
-      { text: 'Definir concepto y diseño de pulseras ⏳', completed: false },
-      { text: 'Investigar plataforma e-commerce (Shopify, etc.) ⏳', completed: false },
-      { text: 'Crear plan de negocio y marketing ⏳', completed: false },
+      { text: 'Definir servicios (cartelería, ads)', completed: false },
+      { text: 'Crear portfolio visual', completed: false },
+      { text: 'Buscar primeros clientes', completed: false },
     ]},
     { id: 9, name: '🎪 Campaña Mamarrachos', status: 'Pendiente', description: 'Marketing QR: "Etiqueta y gana chupito"', subTasks: [
-      { text: 'Concepto definido ✅', completed: true },
-      { text: 'Diseño carteles ⏳', completed: false },
-      { text: 'Generar QR codes ⏳', completed: false },
+      { text: 'Concepto definido', completed: true },
+      { text: 'Diseño carteles', completed: false },
+      { text: 'Generar QR codes', completed: false },
+    ]},
+    { id: 14, name: '💎 Proyecto Pulseras (Tienda Online)', status: 'Ideación', description: 'E-commerce de pulseras artesanales', subTasks: [
+      { text: 'Definir concepto y diseño', completed: false },
+      { text: 'Investigar plataforma e-commerce', completed: false },
+      { text: 'Crear plan de negocio', completed: false },
+    ]},
+    { id: 21, name: '🌐 Proyecto Danisid.com', status: 'En Revisión', description: 'Optimización de la web personal/profesional', subTasks: [
+      { text: 'Clarificar propuesta de valor', completed: false },
+      { text: 'Potenciar portafolio con estudios de caso', completed: false },
+      { text: 'Reforzar marca personal', completed: false },
+      { text: 'Refactorización y migración a React', completed: false },
+    ]},
+    { id: 22, name: '📄 Proyecto cv.danisid.com', status: 'En Planificación', description: 'CV online interactivo y portafolio', subTasks: [
+      { text: 'Seleccionar plataforma o tecnología', completed: false },
+      { text: 'Diseñar estructura y contenido', completed: false },
+      { text: 'Conceptualizar tarjeta de visita digital', completed: false },
+    ]},
+    { id: 23, name: '🎓 CyberClases', status: 'Ideación', description: 'Plataforma para impartir clases de tecnología', subTasks: [
+      { text: 'Definir temario y estructura', completed: false },
+      { text: 'Investigar plataformas', completed: false },
+    ]},
+    { id: 24, name: '🎨 Proyecto El Manicomio Tattoo', status: 'Importante', description: 'Web para el estudio de tatuajes (WordPress)', subTasks: [
+      { text: 'Finalizar y desplegar la web', completed: false },
+      { text: 'Definir servicio de Modernización con React', completed: false },
     ]},
   ],
   // Proyectos que construyen marca, habilidades o son activos a largo plazo.
   strategicProjects: [
     { id: 7, name: '🔵 BlueCore AI', status: 'Parcial', description: 'Asistente estratégico con IA', subTasks: [
-      { text: 'Interfaz base: ✅ COMPLETADA', completed: true },
-      { text: 'Integración Gemini API: ❌ PENDIENTE', completed: false },
-      { text: 'Sistema comandos: 🔄 PARCIAL', completed: false },
+      { text: 'Interfaz base completada', completed: true },
+      { text: 'Integración Gemini API', completed: false },
+      { text: 'Sistema de comandos (Parcial)', completed: false },
     ]},
-    { id: 15, name: '📚 Proyecto Antología', status: 'Ideación', description: 'Recopilación de escritos y relatos', subTasks: [
-      { text: 'Definir temática y estructura ⏳', completed: false },
-      { text: 'Establecer rutina de escritura ⏳', completed: false },
+    { id: 25, name: '🌌 Quimera Alchemist', status: 'En Desarrollo', description: 'Proyecto de desarrollo personal y profesional', subTasks: [
+      { text: 'Continuar desarrollo de módulos clave', completed: false },
+      { text: 'Especialización en tecnologías Cloud', completed: false },
+    ]},
+    { id: 15, name: '💔 Antología del Amor y otras Nostalgias', status: 'Ideación', description: 'Proyecto de escritura creativa', subTasks: [
+      { text: 'Definir alcance y objetivos', completed: false },
     ]},
     { id: 16, name: '❤️ Diario de Papá (Legado IA)', status: 'Planificación', description: 'Crear una IA con mi personalidad para Adrián', subTasks: [
-      { text: 'Investigar arquitecturas de BBDD (relacional/NoSQL) para datos emocionales ⏳', completed: false },
-      { text: 'Definir la estructura de datos de la "personalidad" ⏳', completed: false },
-      { text: 'Comenzar a poblar la "Antología del Alma" ✅', completed: true },
+      { text: 'Investigar arquitecturas de BBDD', completed: false },
+      { text: 'Definir la estructura de datos de la "personalidad"', completed: false },
+      { text: 'Comenzar a poblar la "Antología del Alma"', completed: true },
+    ]},
+    { id: 26, name: '🎸 guitarApp', status: 'Ideación', description: 'App para guitarristas', subTasks: [
+      { text: 'Definir funcionalidades principales', completed: false },
+    ]},
+    { id: 27, name: '🌃 CyberPunk Project', status: 'Ideación', description: 'Proyecto con temática Cyberpunk', subTasks: [
+      { text: 'Definir el concepto y los objetivos', completed: false },
+    ]},
+    { id: 28, name: '🤖 GeminiSolutions', status: 'Ideación', description: 'Soluciones con la API de Gemini', subTasks: [
+      { text: 'Definir el objetivo principal', completed: false },
     ]},
   ],
   // Tareas recurrentes y responsabilidades.
@@ -56,16 +87,16 @@ const initialData = {
   ],
   // Crecimiento personal y ocio.
   developmentAndLeisure: [
-    { id: 10, name: '� Neo-Birthday SidZCooL', status: 'Ideación', description: 'Fiesta cyberpunk multidimensional', subTasks: [
-      { text: 'Definir concepto visual ⏳', completed: false },
-      { text: 'Lista invitados ⏳', completed: false },
-      { text: 'Presupuesto estimado ⏳', completed: false },
+    { id: 10, name: '🎉 Neo-Birthday SidZCooL', status: 'Ideación', description: 'Fiesta cyberpunk multidimensional', subTasks: [
+      { text: 'Definir concepto visual', completed: false },
+      { text: 'Lista invitados', completed: false },
+      { text: 'Presupuesto estimado', completed: false },
     ]},
-    { id: 11, name: '🎮 Gaming & Ahorro', status: 'Planificado', description: 'Zelda TOTK + Cyberpunk 2077', subTasks: [
-      { text: 'Ahorrar €40 para Cyberpunk ⏳', completed: false },
+    { id: 11, name: '🎮 Gaming & Ahorro', status: 'Planificado', description: 'Ahorro para juegos pendientes', subTasks: [
+      { text: 'Ahorrar €40 para Cyberpunk 2077', completed: false },
     ]},
-    { id: 12, name: '🎭 Agenda Cultural', status: 'Agendados', description: 'Networking e inspiración', subTasks: [
-      { text: 'Candlelight: Joe Hisaishi (25 Ene) ⏳', completed: false },
+    { id: 12, name: '🎭 Agenda Cultural', status: 'Agendado', description: 'Networking e inspiración', subTasks: [
+      { text: 'Candlelight: Joe Hisaishi (25 Ene)', completed: false },
     ]},
   ],
   // Deudas y compromisos financieros
@@ -84,15 +115,28 @@ const initialData = {
   ]
 };
 
+const techShoppingList = {
+  id: 400, name: '🛒 COMPRAS TECNOLÓGICAS', status: 'Pendiente', subTasks: [
+    { text: 'Pilas AA para el mouse', completed: false },
+    { text: 'Cable HDMI más largo', completed: false },
+    { text: 'Mando para TV Samsung (UE32J5570)', completed: false },
+  ]
+};
+
 const todaysPlan = [
   {
-    id: 101,
-    name: '⚡ PLAN DE HOY: LANZAR OFERTA MÍNIMA VIABLE',
-    status: 'Activo',
+    id: 100,
+    name: '📅 PLAN DE HOY',
+    status: 'URGENTE',
     subTasks: [
-      { text: 'Diseñar tarjeta de visita digital (CyberMadrid ADS)', completed: false },
-      { text: 'Definir paquete de servicio "Puesta a punto WordPress"', completed: false },
+      { text: 'Configuración de pantalla HDMI en Nobara Linux', completed: true },
+      { text: 'Refactorización y migración de danisid.com a React', completed: false },
+      { text: 'Conceptualizar tarjeta de visita digital (Marca Personal)', completed: false },
+      { text: 'Diseñar paquete de servicio "Modernización con React"', completed: false },
       { text: 'Contactar 1er cliente potencial (ej. Mamarrachos)', completed: false },
+      { text: 'Comprar: Pilas AA para el mouse', completed: false },
+      { text: 'Comprar: Cable HDMI más largo', completed: false },
+      { text: 'Comprar: Mando para TV Samsung (UE32J5570)', completed: false },
     ]
   }
 ];
@@ -134,7 +178,7 @@ const Dashboard = ({ projectsData, setProjectsData, todayData, setTodayData, han
       )}
 
       <div className="grid" style={{ gridTemplateColumns: '1fr' }}>
-        <div className="cyber-card card">
+        <div className="cyber-card card urgent-card">
           {todayData.map(p => (
             <div key={p.id} className="project-item">
               <div className="project-header">
@@ -284,6 +328,26 @@ const Dashboard = ({ projectsData, setProjectsData, todayData, setTodayData, han
       </div>
 
       <div className="grid">
+        <Card title={techShoppingList.name} className="shopping-card">
+          <div className="project-item">
+              {techShoppingList.subTasks && (
+                <ul className="subtask-list">
+                  {techShoppingList.subTasks.map((task, index) => (
+                    <li key={index} className="subtask-item" onClick={() => onToggleSubTask(techShoppingList.id, index)}>
+                      <input type="checkbox" checked={task.completed} readOnly />
+                      <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
+                      <span>{task.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+        </Card>
+      </div>
+
+
+
+      <div className="grid">
         <div className="cyber-card card">
             <h3>🎯 PRÓXIMAS ACCIONES CRÍTICAS</h3>
             <div className="task-list">
@@ -298,6 +362,7 @@ const Dashboard = ({ projectsData, setProjectsData, todayData, setTodayData, han
 const App = () => {
   const [projectsData, setProjectsData] = useState(initialData);
   const [todayData, setTodayData] = useState(todaysPlan);
+  const [techShopping, setTechShopping] = useState(techShoppingList);
 
   useEffect(() => {
     const savedData = localStorage.getItem('projectsData');
@@ -305,10 +370,21 @@ const App = () => {
       setProjectsData(JSON.parse(savedData));
     }
   }, []);
+  
+  useEffect(() => {
+    const savedTechShopping = localStorage.getItem('techShopping');
+    if (savedTechShopping) {
+      setTechShopping(JSON.parse(savedTechShopping));
+    }
+  }, []);
 
   useEffect(() => {
     localStorage.setItem('projectsData', JSON.stringify(projectsData));
   }, [projectsData]);
+  
+  useEffect(() => {
+    localStorage.setItem('techShopping', JSON.stringify(techShopping));
+  }, [techShopping]);
 
   const handleToggleSubTask = (projectId, subTaskIndex) => {
     const newData = JSON.parse(JSON.stringify(projectsData)); // Deep copy
@@ -327,13 +403,20 @@ const App = () => {
       todayProject.subTasks[subTaskIndex].completed = !todayProject.subTasks[subTaskIndex].completed;
     }
 
+    const newTechShoppingData = JSON.parse(JSON.stringify(techShopping));
+    if (projectId === newTechShoppingData.id) {
+      newTechShoppingData.subTasks[subTaskIndex].completed = !newTechShoppingData.subTasks[subTaskIndex].completed;
+    }
+
     setProjectsData(newData);
     setTodayData(newTodayData);
+    setTechShopping(newTechShoppingData);
   };
 
   return (
     <Routes>
       <Route path="/" element={<Dashboard projectsData={projectsData} setProjectsData={setProjectsData} todayData={todayData} setTodayData={setTodayData} handleToggleSubTask={handleToggleSubTask} />} />
+      <Route path="/plan-de-accion" element={<PlanDeAccion />} />
       <Route path="/carta-a-mama" element={<CartaParaMama />} />
     </Routes>
   );

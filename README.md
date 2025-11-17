@@ -13,6 +13,7 @@ Su misión es doble:
 - **Estados de Tarea Avanzados:** Las tareas pueden estar `En Curso`, `Retrasadas`, `Completadas` o `Pendientes`, con un feedback visual claro.
 - **Asistente IA (BlueCore):** Interactúa con una IA para gestionar tus tareas usando lenguaje natural.
 - **Gestión Financiera:** Una sección dedicada para visualizar y gestionar deudas y préstamos, manteniendo un control claro de los compromisos financieros.
+- **Seguimiento de Estado del Proyecto:** Un sistema para registrar la última acción o hito alcanzado en cada "nodo" del ecosistema, permitiendo una visión rápida del progreso general y facilitando la toma de decisiones estratégicas.
 - **Estética Cyberpunk:** Una interfaz inmersiva con una temática de neón y terminal.
 - **Persistencia Local:** Tus tareas y tu clave de API de Gemini se guardan de forma segura en el almacenamiento local de tu navegador.
 
@@ -23,6 +24,7 @@ BlueCore no nació con su forma actual. Su viaje refleja una búsqueda de propó
 - **V1 (Agenda Cyberpunk):** El proyecto comenzó como una simple lista de tareas con una estética cyberpunk. Su objetivo era la organización básica.
 - **V2 (BlueCore - Núcleo Estratégico):** La herramienta evolucionó para convertirse en un dashboard estratégico. Las tareas se reorganizaron por prioridades (`Foco Ingresos`, `Proyectos Estratégicos`), alineando el trabajo diario con la "Misión Principal" del usuario.
 - **V3 (BlueCore - El Corazón del Alquimista):** La versión actual trasciende la productividad. Con la introducción de la "Antología del Alma" y el proyecto "Diario de Papá", BlueCore se convierte en una herramienta para la introspección y la creación de un legado personal, fusionando la lógica de la máquina con la esencia del espíritu humano.
+- **V4 (BlueCore - El Ecosistema Quimérico):** La visión se expande. BlueCore ahora actúa como el núcleo de un ecosistema mayor, donde cada proyecto (`CyberMadrid`, `Quimera Alchemist`, `Danisid.com`, etc.) es tratado como un "nodo" o "departamento" especializado. Estos nodos son entidades semi-autónomas que colaboran simbióticamente, mutan y se adaptan, formando una "Quimera" digital en constante evolución. Esta estructura permite una refactorización y crecimiento orgánico del sistema completo.
 
 ## Puesta en Marcha y Uso
 

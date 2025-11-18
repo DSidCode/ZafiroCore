@@ -1,6 +1,6 @@
-/* Estilos BlueCore Dashboard */
+/* Estilos Zafiro Dashboard */
 :root {
-    --bluecore: #0066ff;
+    --zafiro: #0066ff;
     --ai-purple: #a855f7;
     --cyber-pink: #ff00ff;
     --zelda-green: #00cc88;
@@ -48,10 +48,10 @@ body {
     margin: 0 auto;
 }
 
-.bluecore-title {
-    color: var(--bluecore);
+.zafiro-title {
+    color: var(--zafiro);
     font-size: 2.5em;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--bluecore), 0 0 20px var(--bluecore);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--zafiro), 0 0 20px var(--zafiro);
     margin-bottom: 10px;
 }
 
@@ -90,7 +90,7 @@ body {
 }
 
 .card h3 {
-    color: var(--bluecore);
+    color: var(--zafiro);
     margin-bottom: 15px;
     border-bottom: 1px solid #333350;
     padding-bottom: 8px;
@@ -107,13 +107,13 @@ body {
 }
 
 .strategic-card {
-    border-left: 4px solid var(--bluecore);
+    border-left: 4px solid var(--zafiro);
     background: linear-gradient(135deg, #151530 0%, #1a2a4a 100%);
 }
 
 .strategic-card h3 {
-    color: var(--bluecore);
-    text-shadow: 0 0 8px var(--bluecore);
+    color: var(--zafiro);
+    text-shadow: 0 0 8px var(--zafiro);
 }
 
 .maintenance-card {
@@ -282,7 +282,7 @@ body {
     position: fixed;
     top: 20px;
     right: 20px;
-    background: var(--bluecore);
+    background: var(--zafiro);
     color: white;
     border: none;
     padding: 10px 15px;
@@ -299,7 +299,7 @@ body {
 }
 
 .settings-panel h2 {
-    color: var(--bluecore);
+    color: var(--zafiro);
 }
 
 .event-list, .shopping-list {
@@ -402,8 +402,8 @@ body {
 }
 
 .back-link:hover {
-    color: var(--bluecore);
-    text-shadow: 0 0 5px var(--bluecore);
+    color: var(--zafiro);
+    text-shadow: 0 0 5px var(--zafiro);
 }
 /* --- NUEVA CABECERA --- */
 .main-header {
@@ -439,6 +439,8 @@ body {
     color: var(--accent);
     animation: neon-flicker 4s infinite linear;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
 }
 
 .logo-link {
@@ -542,7 +544,7 @@ body {
 .project-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 4px 20px rgba(0, 102, 255, 0.2);
-    border-color: var(--bluecore);
+    border-color: var(--zafiro);
 }
 
 .project-header {
@@ -570,7 +572,7 @@ body {
     color: #a0a0c0;
     margin-bottom: 15px;
     padding-left: 10px;
-    border-left: 2px solid var(--bluecore);
+    border-left: 2px solid var(--zafiro);
 }
 
 .subtask-list {

@@ -1,0 +1,76 @@
+/* /home/sidzcool/BlueCore/src/responsive.css */
+
+/* --- GENERAL RESETS & MOBILE-FIRST DEFAULTS --- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* 
+    Tipografía fluida: el tamaño de la fuente escala con el ancho del viewport, 
+    pero dentro de un rango razonable para no ser ni muy pequeño ni muy grande.
+  */
+  font-size: clamp(16px, 1.5vw + 0.5rem, 18px);
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  background-color: #121212; /* Un fondo oscuro base */
+  color: #e0e0e0; /* Un color de texto claro que no sea blanco puro */
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* --- CLASES DE UTILIDAD PARA LAYOUT --- */
+
+/* 
+  Un contenedor genérico que centra el contenido y proporciona padding.
+  Úsalo para envolver las secciones principales de tu página.
+  Ej: <div class="container">...</div>
+*/
+.container {
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo para pantallas grandes */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* 
+  Un sistema de grid simple y responsivo usando Flexbox.
+  Los hijos de este contenedor se adaptarán automáticamente.
+  Ej: <div class="responsive-grid"> <div>Col 1</div> <div>Col 2</div> </div>
+*/
+.responsive-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Espacio entre los elementos del grid */
+}
+
+/* Por defecto (móvil), los elementos del grid ocupan el 100% del ancho */
+.responsive-grid > * {
+  flex: 1 1 100%;
+}
+
+
+/* --- MEDIA QUERIES PARA ADAPTACIÓN --- */
+
+/* Tablets y pantallas más grandes (a partir de 768px) */
+@media (min-width: 768px) {
+  .responsive-grid > * {
+    /* En tablets, cada elemento ocupa la mitad (menos el gap) -> 2 columnas */
+    flex-basis: calc(50% - 0.75rem); 
+  }
+}

@@ -1,12 +1,13 @@
-# Plan de Acción y Estructura de Proyectos - BlueCore
+# Plan de Acción y Estructura de Proyectos - Ecosistema Quimérico
 
-Este documento sirve como guía maestra y registro de ideas para el proyecto BlueCore. No debe ser eliminado. Es un espacio para la planificación estructural antes de la implementación visual.
+Este documento sirve como guía maestra y registro de ideas para el proyecto **Zafiro**. No debe ser eliminado. Es un espacio para la planificación estructural antes de la implementación visual.
 
 ---
 
 ## 📅 PLAN DE HOY (Tareas Inmediatas)
 *Acciones que requieren atención inmediata para desbloquear el trabajo o resolver problemas críticos.*
 
+- **[ ] Actualizar anuncio de búsqueda de camarera para Yedra.**
 - **[x] Configuración de pantalla HDMI en Nobara Linux:** Problema resuelto.
 - **[ ] Refactorización y migración de danisid.com a React.**
 - **[ ] Conceptualizar tarjeta de visita digital (Marca Personal).**
@@ -21,7 +22,7 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto Blu
 ## ⚡ PROYECTOS EN CURSO (VISTA RÁPIDA)
 *Un resumen de los proyectos que están actualmente en desarrollo activo o planificación prioritaria.*
 
-- **BlueCore AI**: Desarrollo del asistente y la interfaz.
+- **Zafiro AI**: Desarrollo del asistente y la interfaz.
 - **Diario de Papá (Legado IA)**: Estructuración y recopilación de datos para la IA.
 - **CyberMadrid ADS**: Planificación y búsqueda de los primeros clientes.
 
@@ -98,7 +99,7 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto Blu
 ## 🚀 PROYECTOS ESTRATÉGICOS Y CREATIVOS
 *Proyectos que construyen marca, habilidades o son activos a largo plazo.*
 
-### 🔵 BlueCore AI
+### 🔵 Zafiro AI
 - **Estado:** Parcial
 - **Descripción:** Asistente estratégico personal con IA.
 - **Subtareas:**
@@ -213,8 +214,8 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto Blu
 
 ---
 
-## 💡 EVOLUCIÓN DEL SISTEMA BLUECORE (Tareas Pendientes)
-*Ideas y mejoras estructurales para el propio sistema BlueCore.*
+## 💡 EVOLUCIÓN DEL SISTEMA ZAFIRO (Tareas Pendientes)
+*Ideas y mejoras estructurales para el propio sistema Zafiro.*
 
 ### 🔄 Refactorización de Tareas a Tarjetas de Proyecto
 - **Estado:** Pendiente

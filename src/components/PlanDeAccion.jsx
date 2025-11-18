@@ -5,9 +5,9 @@ import remarkGfm from 'remark-gfm';
 
 // El contenido de tareas.md se incrusta aquí para su visualización.
 const tareasMarkdownContent = `
-# Plan de Acción y Estructura de Proyectos - BlueCore
+# Plan de Acción y Estructura de Proyectos - Ecosistema Quimérico
 
-Este documento sirve como guía maestra y registro de ideas para el proyecto BlueCore. No debe ser eliminado. Es un espacio para la planificación estructural antes de la implementación visual.
+Este documento sirve como guía maestra y registro de ideas para el proyecto **BlueCore**. No debe ser eliminado. Es un espacio para la planificación estructural antes de la implementación visual.
 
 ---
 

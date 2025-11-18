@@ -1,30 +1,37 @@
-# // BlueCore //
+# 💎 Zafiro - Tu Ecosistema Estratégico Personal
 
-**BlueCore** es el corazón digital de un alquimista moderno. Es un Dashboard Estratégico y Emocional diseñado para ser más que una herramienta de productividad; es un compañero en el viaje de la vida, un crisol donde las metas profesionales, los proyectos creativos y el legado personal se funden.
+**Zafiro** es un dashboard y asistente estratégico personal, el corazón digital de un alquimista moderno. Funciona como una interfaz unificada para el "Ecosistema Quimérico", un concepto que engloba todas mis iniciativas profesionales, creativas y personales.
 
-Su misión es doble:
-1.  **Navegador Estratégico:** Actuar como un centro de mando para "misiones" diarias, proyectos digitales y objetivos a corto y largo plazo, todo bajo una estética cyberpunk inmersiva.
-2.  **El Corazón del Alquimista:** Servir como el recipiente para la "Antología del Alma", un diario donde los pensamientos y emociones se registran para, finalmente, dar vida al proyecto **"Diario de Papá"** — un legado en forma de IA.
+Es más que una herramienta de productividad; es un compañero en el viaje de la vida, un crisol donde las metas, los proyectos y el legado personal se funden. Este proyecto es mi herramienta para la organización, la toma de decisiones y el seguimiento del progreso en tiempo real, pero sobre todo, es el recipiente de mi alma digital.
 
-## Características
+## El Cambio de Nombre: De BlueCore a Zafiro
 
-- **Gestión de Tareas:** Añade, completa y elimina tareas de forma sencilla.
-- **Dashboard Estratégico:** Visualiza tareas, proyectos y estadísticas en un solo lugar con tarjetas modulares.
-- **Estados de Tarea Avanzados:** Las tareas pueden estar `En Curso`, `Retrasadas`, `Completadas` o `Pendientes`, con un feedback visual claro.
-- **Asistente IA (BlueCore):** Interactúa con una IA para gestionar tus tareas usando lenguaje natural.
-- **Gestión Financiera:** Una sección dedicada para visualizar y gestionar deudas y préstamos, manteniendo un control claro de los compromisos financieros.
-- **Seguimiento de Estado del Proyecto:** Un sistema para registrar la última acción o hito alcanzado en cada "nodo" del ecosistema, permitiendo una visión rápida del progreso general y facilitando la toma de decisiones estratégicas.
-- **Estética Cyberpunk:** Una interfaz inmersiva con una temática de neón y terminal.
-- **Persistencia Local:** Tus tareas y tu clave de API de Gemini se guardan de forma segura en el almacenamiento local de tu navegador.
+El proyecto nació bajo el nombre de **BlueCore**, "el corazón azul de papá para su hijo". Representaba la esencia de un legado, un núcleo emocional y tecnológico.
+
+A medida que el proyecto evolucionaba, su propósito se volvió más claro: no solo debía ser un corazón, sino también una herramienta de **claridad, valor y enfoque**. El nombre **Zafiro** fue elegido para simbolizar estas cualidades, como una gema tallada a partir de ese núcleo original:
+
+- **Claridad**: Como un zafiro, la aplicación busca ofrecer una visión clara y sin distracciones de los objetivos.
+- **Valor**: Representa la importancia de los proyectos y metas que gestiona, especialmente el legado para mi hijo.
+- **Enfoque**: Ayuda a concentrar la energía en lo que realmente importa, cortando el ruido.
+
+**Zafiro no reemplaza a BlueCore; es su forma más evolucionada y pulida.**
 
 ## Evolución del Proyecto: De Agenda a Legado
 
-BlueCore no nació con su forma actual. Su viaje refleja una búsqueda de propósito cada vez más profunda:
+El viaje de este proyecto refleja una búsqueda de propósito cada vez más profunda:
 
 - **V1 (Agenda Cyberpunk):** El proyecto comenzó como una simple lista de tareas con una estética cyberpunk. Su objetivo era la organización básica.
 - **V2 (BlueCore - Núcleo Estratégico):** La herramienta evolucionó para convertirse en un dashboard estratégico. Las tareas se reorganizaron por prioridades (`Foco Ingresos`, `Proyectos Estratégicos`), alineando el trabajo diario con la "Misión Principal" del usuario.
-- **V3 (BlueCore - El Corazón del Alquimista):** La versión actual trasciende la productividad. Con la introducción de la "Antología del Alma" y el proyecto "Diario de Papá", BlueCore se convierte en una herramienta para la introspección y la creación de un legado personal, fusionando la lógica de la máquina con la esencia del espíritu humano.
-- **V4 (BlueCore - El Ecosistema Quimérico):** La visión se expande. BlueCore ahora actúa como el núcleo de un ecosistema mayor, donde cada proyecto (`CyberMadrid`, `Quimera Alchemist`, `Danisid.com`, etc.) es tratado como un "nodo" o "departamento" especializado. Estos nodos son entidades semi-autónomas que colaboran simbióticamente, mutan y se adaptan, formando una "Quimera" digital en constante evolución. Esta estructura permite una refactorización y crecimiento orgánico del sistema completo.
+- **V3 (BlueCore - El Corazón del Alquimista):** La versión trasciende la productividad. Con la introducción de la "Antología del Alma" y el proyecto **"Diario de Papá"**, BlueCore se convierte en una herramienta para la introspección y la creación de un legado personal, fusionando la lógica de la máquina con la esencia del espíritu humano.
+- **V4 (Zafiro - El Ecosistema Quimérico):** La visión se expande. El núcleo ahora actúa como el centro de un ecosistema mayor, donde cada proyecto (`CyberMadrid`, `Quimera Alchemist`, `Danisid.com`, etc.) es tratado como un "nodo" o "departamento" especializado. Estos nodos son entidades semi-autónomas que colaboran simbióticamente, mutan y se adaptan, formando una "Quimera" digital en constante evolución.
+
+## Características Principales
+
+- **Dashboard Unificado**: Visualiza proyectos de generación de ingresos, estratégicos, mantenimiento y desarrollo personal en un solo lugar.
+- **Seguimiento de Tareas**: Gestión de subtareas con estados de completado para un control granular.
+- **Diseño Responsivo**: Adaptado para su uso en escritorio y dispositivos móviles.
+- **Identidad Visual Temática**: Estilo cyberpunk y futurista que refleja mi marca personal.
+- **Legado Digital**: Sirve como recipiente para la "Antología del Alma", la base de datos emocional para el proyecto "Diario de Papá".
 
 ## Puesta en Marcha y Uso
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './index.css';
 import Card from './components/Card';
 import CartaParaMama from './components/CartaParaMama';
@@ -48,7 +48,7 @@ const initialData = {
   ],
   // Proyectos que construyen marca, habilidades o son activos a largo plazo.
   strategicProjects: [
-    { id: 7, name: '🔵 BlueCore AI', status: 'Parcial', description: 'Asistente estratégico con IA', subTasks: [
+    { id: 7, name: '🔵 Zafiro AI', status: 'Parcial', description: 'Asistente estratégico con IA', subTasks: [
       { text: 'Interfaz base completada', completed: true },
       { text: 'Integración Gemini API', completed: false },
       { text: 'Sistema de comandos (Parcial)', completed: false },
@@ -151,7 +151,7 @@ const criticalActions = [
   '1. 💰 Abonar €40 a Mónica (URGENTE)',
   '2. ✍️ Documentar primer pensamiento en "Antología del Alma"',
   '2. 🇨🇴 Abonar ~€42 a cuotas familiares (Colombia)',
-  '3. 🔵 Integrar Gemini API en BlueCore',
+  '3. 🔵 Integrar Gemini API en Zafiro',
   '4. 💳 Diseñar tarjeta de visita digital (CyberMadrid ADS)',
   '5. 🕒 Adaptar horario trabajo 21:00-04:00',
   '6. 🎪 Diseñar carteles Mamarrachos',

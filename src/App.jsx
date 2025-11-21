@@ -3,7 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import './index.css';
 import Card from './components/Card';
 import CartaParaMama from './components/CartaParaMama';
+import DiarioParaAdrian from './components/DiarioParaAdrian'; // Asegúrate que la ruta sea correcta
 import PlanDeAccion from './components/PlanDeAccion';
+import ProjectItem from './components/ProjectItem';
 import Header from './components/Header';
 
 
@@ -60,8 +62,9 @@ const initialData = {
     { id: 15, name: '💔 Antología del Amor y otras Nostalgias', status: 'Ideación', description: 'Proyecto de escritura creativa', subTasks: [
       { text: 'Definir alcance y objetivos', completed: false },
     ]},
-    { id: 16, name: '❤️ Diario de Papá (Legado IA)', status: 'Planificación', description: 'Crear una IA con mi personalidad para Adrián', subTasks: [
+    { id: 16, name: '❤️ Diario de Papá (Legado IA)', status: 'Planificación', description: 'Crear una IA con mi personalidad para Adrián. Nota: ¿Cuántas personas ahora mismo están pensando en construir una IA a partir de sus vivencias para dejarle a su hijo? ¿Cómo podríamos investigar este mercado y patentar una app que incluso pueda tener control parental? De eso se trata este proyecto: quiero dejarle a mi hijo mi personalidad, mi alma, por si algún día le llego a faltar.', subTasks: [
       { text: 'Investigar arquitecturas de BBDD', completed: false },
+      { text: 'Investigar mercado potencial y viabilidad de patente', completed: false },
       { text: 'Definir la estructura de datos de la "personalidad"', completed: false },
       { text: 'Comenzar a poblar la "Antología del Alma"', completed: true },
     ]},
@@ -129,6 +132,7 @@ const todaysPlan = [
     name: '📅 PLAN DE HOY',
     status: 'URGENTE',
     subTasks: [
+      { text: 'Ir al consulado a autenticar poder (sucesión casa abuelos)', completed: false },
       { text: 'Configuración de pantalla HDMI en Nobara Linux', completed: true },
       { text: 'Refactorización y migración de danisid.com a React', completed: false },
       { text: 'Conceptualizar tarjeta de visita digital (Marca Personal)', completed: false },
@@ -141,12 +145,6 @@ const todaysPlan = [
   }
 ];
 
-const summary = {
-  completed: 3,
-  partial: 2, // +1 por Diario de Papá
-  pending: 13, // +2 por los nuevos proyectos
-};
-
 const criticalActions = [
   '1. 💰 Abonar €40 a Mónica (URGENTE)',
   '2. ✍️ Documentar primer pensamiento en "Antología del Alma"',
@@ -157,10 +155,22 @@ const criticalActions = [
   '6. 🎪 Diseñar carteles Mamarrachos',
 ];
 
-const Dashboard = ({ projectsData, setProjectsData, todayData, setTodayData, handleToggleSubTask }) => {
+const Dashboard = ({ projectsData, todayData, techShopping, handleToggleSubTask }) => {
   const [showSettings, setShowSettings] = useState(false);
 
   const totalDebt = projectsData.debts.reduce((acc, debt) => acc + debt.amount, 0);
+
+  // Calculate summary dynamically
+  const summary = Object.values(projectsData).flat().reduce((acc, project) => {
+    if (project.status === 'Completado') {
+      acc.completed++;
+    } else if (project.status === 'Parcial' || project.status === 'En Desarrollo' || project.status === 'En Revisión' || project.status === 'En Planificación') {
+      acc.partial++;
+    } else if (project.status) { // Any other status counts as pending
+      acc.pending++;
+    }
+    return acc;
+  }, { completed: 0, partial: 0, pending: 0 });
 
   return (
     <div className="container">
@@ -188,7 +198,7 @@ const Dashboard = ({ projectsData, setProjectsData, todayData, setTodayData, han
               {p.subTasks && (
                 <ul className="subtask-list">
                   {p.subTasks.map((task, index) => (
-                    <li key={index} className="subtask-item" onClick={() => onToggleSubTask(p.id, index)}>
+                    <li key={index} className="subtask-item" onClick={() => handleToggleSubTask(p.id, index)}>
                       <input type="checkbox" checked={task.completed} readOnly />
                       <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
                       <span>{task.text}</span>
@@ -203,97 +213,21 @@ const Dashboard = ({ projectsData, setProjectsData, todayData, setTodayData, han
 
       <div className="triple-grid">
         <Card title="🎯 FOCO PRINCIPAL: GENERACIÓN DE INGRESOS" className="cyber-card">
-          {projectsData.incomeFocus.map(p => (
-            <div key={p.id} className="project-item">
-              <div className="project-header">
-                <span className="project-title">{p.name}</span>
-                <span className="project-status">{p.status}</span>
-              </div>
-              <p className="project-description">{p.description}</p>
-              {p.subTasks && (
-                <ul className="subtask-list">
-                  {p.subTasks.map((task, index) => (
-                    <li key={index} className="subtask-item" onClick={() => onToggleSubTask(p.id, index)}>
-                      <input type="checkbox" checked={task.completed} readOnly />
-                      <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
-                      <span>{task.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
+          {projectsData.incomeFocus.map(p => <ProjectItem key={p.id} project={p} onToggleSubTask={handleToggleSubTask} />)}
         </Card>
 
         <Card title="🚀 PROYECTOS ESTRATÉGICOS Y CREATIVOS" className="strategic-card">
-          {projectsData.strategicProjects.map(p => (
-             <div key={p.id} className="project-item">
-             <div className="project-header">
-               <span className="project-title">{p.name}</span>
-               <span className="project-status">{p.status}</span>
-             </div>
-             <p className="project-description">{p.description}</p>
-             {p.subTasks && (
-               <ul className="subtask-list">
-                 {p.subTasks.map((task, index) => (
-                   <li key={index} className="subtask-item" onClick={() => onToggleSubTask(p.id, index)}>
-                     <input type="checkbox" checked={task.completed} readOnly />
-                     <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
-                     <span>{task.text}</span>
-                   </li>
-                 ))}
-               </ul>
-             )}
-           </div>
-          ))}
+          {projectsData.strategicProjects.map(p => <ProjectItem key={p.id} project={p} onToggleSubTask={handleToggleSubTask} />)}
         </Card>
 
         <Card title="⚙️ OBLIGACIONES Y MANTENIMIENTO" className="maintenance-card">
-          {projectsData.maintenance.map(p => (
-             <div key={p.id} className="project-item">
-             <div className="project-header">
-               <span className="project-title">{p.name}</span>
-               <span className="project-status">{p.status}</span>
-             </div>
-             <p className="project-description">{p.description}</p>
-             {p.subTasks && (
-               <ul className="subtask-list">
-                 {p.subTasks.map((task, index) => (
-                   <li key={index} className="subtask-item" onClick={() => onToggleSubTask(p.id, index)}>
-                     <input type="checkbox" checked={task.completed} readOnly />
-                     <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
-                     <span>{task.text}</span>
-                   </li>
-                 ))}
-               </ul>
-             )}
-           </div>
-          ))}
+          {projectsData.maintenance.map(p => <ProjectItem key={p.id} project={p} onToggleSubTask={handleToggleSubTask} />)}
         </Card>
       </div>
 
       <div className="triple-grid">
         <Card title="🌱 DESARROLLO Y OCIO" className="event-card">
-          {projectsData.developmentAndLeisure.map(p => (
-             <div key={p.id} className="project-item">
-             <div className="project-header">
-               <span className="project-title">{p.name}</span>
-               <span className="project-status">{p.status}</span>
-             </div>
-             <p className="project-description">{p.description}</p>
-             {p.subTasks && (
-               <ul className="subtask-list">
-                 {p.subTasks.map((task, index) => (
-                   <li key={index} className="subtask-item" onClick={() => onToggleSubTask(p.id, index)}>
-                     <input type="checkbox" checked={task.completed} readOnly />
-                     <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
-                     <span>{task.text}</span>
-                   </li>
-                 ))}
-               </ul>
-             )}
-           </div>
-          ))}
+          {projectsData.developmentAndLeisure.map(p => <ProjectItem key={p.id} project={p} onToggleSubTask={handleToggleSubTask} />)}
         </Card>
 
         <Card title="💸 DEUDAS Y PRÉSTAMOS" className="debts-card">
@@ -328,12 +262,12 @@ const Dashboard = ({ projectsData, setProjectsData, todayData, setTodayData, han
       </div>
 
       <div className="grid">
-        <Card title={techShoppingList.name} className="shopping-card">
+        <Card title={techShopping.name} className="shopping-card">
           <div className="project-item">
-              {techShoppingList.subTasks && (
+              {techShopping.subTasks && (
                 <ul className="subtask-list">
-                  {techShoppingList.subTasks.map((task, index) => (
-                    <li key={index} className="subtask-item" onClick={() => onToggleSubTask(techShoppingList.id, index)}>
+                  {techShopping.subTasks.map((task, index) => (
+                    <li key={index} className="subtask-item" onClick={() => handleToggleSubTask(techShopping.id, index)}>
                       <input type="checkbox" checked={task.completed} readOnly />
                       <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
                       <span>{task.text}</span>
@@ -364,60 +298,73 @@ const App = () => {
   const [todayData, setTodayData] = useState(todaysPlan);
   const [techShopping, setTechShopping] = useState(techShoppingList);
 
+  // Load all data from localStorage on initial render
   useEffect(() => {
-    const savedData = localStorage.getItem('projectsData');
-    if (savedData) {
-      setProjectsData(JSON.parse(savedData));
-    }
-  }, []);
-  
-  useEffect(() => {
-    const savedTechShopping = localStorage.getItem('techShopping');
-    if (savedTechShopping) {
-      setTechShopping(JSON.parse(savedTechShopping));
-    }
+    const savedProjects = localStorage.getItem('projectsData');
+    if (savedProjects) setProjectsData(JSON.parse(savedProjects));
+
+    const savedToday = localStorage.getItem('todayData');
+    if (savedToday) setTodayData(JSON.parse(savedToday));
+
+    const savedShopping = localStorage.getItem('techShopping');
+    if (savedShopping) setTechShopping(JSON.parse(savedShopping));
   }, []);
 
+  // Save all data to localStorage when it changes
   useEffect(() => {
     localStorage.setItem('projectsData', JSON.stringify(projectsData));
-  }, [projectsData]);
-  
-  useEffect(() => {
+    localStorage.setItem('todayData', JSON.stringify(todayData));
     localStorage.setItem('techShopping', JSON.stringify(techShopping));
-  }, [techShopping]);
+  }, [projectsData, todayData, techShopping]);
 
   const handleToggleSubTask = (projectId, subTaskIndex) => {
-    const newData = JSON.parse(JSON.stringify(projectsData)); // Deep copy
-    
-    for (const category in newData) {
-      const project = newData[category].find(p => p.id === projectId);
-      if (project && project.subTasks) {
-        project.subTasks[subTaskIndex].completed = !project.subTasks[subTaskIndex].completed;
-        break;
+    // Update techShopping state
+    if (projectId === techShopping.id) {
+      const newTechShopping = JSON.parse(JSON.stringify(techShopping)); // Deep copy for safety
+      newTechShopping.subTasks[subTaskIndex].completed = !newTechShopping.subTasks[subTaskIndex].completed;
+      setTechShopping(newTechShopping);
+      return;
+    }
+
+    // Update todayData state
+    const todayProject = todayData.find(p => p.id === projectId);
+    if (todayProject) {
+      const newTodayData = todayData.map(p => {
+        if (p.id === projectId) {
+          const newSubTasks = [...p.subTasks];
+          newSubTasks[subTaskIndex].completed = !newSubTasks[subTaskIndex].completed;
+          return { ...p, subTasks: newSubTasks };
+        }
+        return p;
+      });
+      setTodayData(newTodayData);
+      return;
+    }
+
+    // Update projectsData state
+    const newProjectsData = JSON.parse(JSON.stringify(projectsData)); // Deep copy
+    for (const category in newProjectsData) {
+      const projectIndex = newProjectsData[category].findIndex(p => p.id === projectId);
+      if (projectIndex !== -1 && newProjectsData[category][projectIndex].subTasks) {
+        const newCategory = [...newProjectsData[category]];
+        const newProject = { ...newCategory[projectIndex] };
+        const newSubTasks = [...newProject.subTasks];
+        newSubTasks[subTaskIndex].completed = !newSubTasks[subTaskIndex].completed;
+        newProject.subTasks = newSubTasks;
+        newCategory[projectIndex] = newProject;
+        newProjectsData[category] = newCategory;
+        setProjectsData(newProjectsData);
+        return; // Exit after finding and updating
       }
     }
-
-    const newTodayData = JSON.parse(JSON.stringify(todayData));
-    const todayProject = newTodayData.find(p => p.id === projectId);
-    if (todayProject && todayProject.subTasks) {
-      todayProject.subTasks[subTaskIndex].completed = !todayProject.subTasks[subTaskIndex].completed;
-    }
-
-    const newTechShoppingData = JSON.parse(JSON.stringify(techShopping));
-    if (projectId === newTechShoppingData.id) {
-      newTechShoppingData.subTasks[subTaskIndex].completed = !newTechShoppingData.subTasks[subTaskIndex].completed;
-    }
-
-    setProjectsData(newData);
-    setTodayData(newTodayData);
-    setTechShopping(newTechShoppingData);
   };
 
   return (
     <Routes>
-      <Route path="/" element={<Dashboard projectsData={projectsData} setProjectsData={setProjectsData} todayData={todayData} setTodayData={setTodayData} handleToggleSubTask={handleToggleSubTask} />} />
+      <Route path="/" element={<Dashboard projectsData={projectsData} todayData={todayData} techShopping={techShopping} handleToggleSubTask={handleToggleSubTask} />} />
       <Route path="/plan-de-accion" element={<PlanDeAccion />} />
       <Route path="/carta-a-mama" element={<CartaParaMama />} />
+      <Route path="/diario-para-adrian" element={<DiarioParaAdrian />} />
     </Routes>
   );
 }

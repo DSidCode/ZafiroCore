@@ -1,9 +1,19 @@
 # Changelog
 
-## [FECHA] - feat(ui): Rediseño completo del dashboard y adición de Plan Diario
+Todos los cambios notables en este proyecto serán documentados en este archivo.
 
-Implementa una renovación total de la interfaz de usuario basada en la nueva maqueta, introduciendo un layout modular con `grid` y `triple-grid`, y tarjetas especializadas (`cyber-card`, `event-card`, `shopping-card`) para una mejor organización visual.
+## [2024-07-27] - feat(identity): Renombramiento a Zafiro y consolidación de identidad
 
-Añade una nueva sección "Plan de Hoy" en la parte superior de la UI para mostrar las tareas diarias urgentes, sincronizando la vista gráfica con las tareas gestionadas por texto.
+Esta versión marca la evolución del proyecto, renombrándolo de "BlueCore" a "Zafiro" para establecer una identidad más clara y enfocada, preservando al mismo tiempo el propósito original.
 
-Incluye actualizaciones de contenido como la adición de la tarea "diseñar tarjeta de visita" y la eliminación del evento "Candlelight: Coldplay". También incorpora las múltiples correcciones de sintaxis JSX y estilos CSS que fueron necesarias para estabilizar la aplicación tras el rediseño.
+### Added
+- **Nueva Documentación:** Creación de `README.md` para narrar la historia y propósito del proyecto, y de `CHANGELOG.md` para el registro de versiones.
+- **Mejoras de Interfaz:** Implementación de una base de diseño responsivo (`responsive.css`) para mejorar la usabilidad en dispositivos móviles.
+- **Refactorización:** La cabecera se ha extraído a su propio componente (`Header.jsx`) para una mejor organización.
+
+### Changed
+- **Renombramiento del Proyecto:** Todas las referencias internas, componentes, variables CSS y títulos han sido actualizados a "Zafiro".
+- **Identidad Visual:** El icono de la aplicación (favicon) y la cabecera ahora usan un diamante (💎).
+
+### Fixed
+- **Icono de la Aplicación:** Se ha corregido el enlace roto del favicon para asegurar su correcta visualización en el navegador.

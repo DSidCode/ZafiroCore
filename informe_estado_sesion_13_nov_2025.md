@@ -2,6 +2,7 @@
 
 **1. Reestructuración del Entorno de Trabajo:**
     *   Se ha establecido `/home/sidzcool/GeminiSolutions/` como el "corazón" o "núcleo" central para la gestión de todos tus proyectos, filosofía y documentación personal.
+    *   **Corrección:** El verdadero "corazón" o "núcleo" central para la gestión de todos tus proyectos, filosofía y documentación personal es **ZafiroCore** (el directorio actual, antes BlueCore). GeminiSolutions es un nodo especializado dentro de este ecosistema.
 
 **2. Gestión de Tareas:**
     *   El archivo `tareas.md` ha sido movido de `/home/sidzcool/BlueCore/` a `/home/sidzcool/GeminiSolutions/`.

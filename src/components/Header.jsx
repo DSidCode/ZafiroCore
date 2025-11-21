@@ -15,6 +15,9 @@ const Header = () => {
           <NavLink to="/carta-a-mama" className={({ isActive }) => "nav-button nav-button-mama" + (isActive ? " active" : "")}>
             <span>Carta a Mamá</span>
           </NavLink>
+          <NavLink to="/diario-para-adrian" className={({ isActive }) => "nav-button nav-button-adrian" + (isActive ? " active" : "")}>
+            <span>Diario para Adrián</span>
+          </NavLink>
         </nav>
       </div>
     </header>

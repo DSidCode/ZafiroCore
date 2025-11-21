@@ -7,6 +7,7 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto **Z
 ## 📅 PLAN DE HOY (Tareas Inmediatas)
 *Acciones que requieren atención inmediata para desbloquear el trabajo o resolver problemas críticos.*
 
+- **[ ] Ir al consulado a autenticar poder (sucesión casa abuelos).**
 - **[ ] Actualizar anuncio de búsqueda de camarera para Yedra.**
 - **[x] Configuración de pantalla HDMI en Nobara Linux:** Problema resuelto.
 - **[ ] Refactorización y migración de danisid.com a React.**

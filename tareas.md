@@ -4,16 +4,33 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto **Z
 
 ---
 
-## 📅 PLAN DE HOY (Tareas Inmediatas)
+## 📅 PLAN DE HOY (Actualizado 14 Dic, 22:35)
 *Acciones que requieren atención inmediata para desbloquear el trabajo o resolver problemas críticos.*
 
-- **[ ] Ir al consulado a autenticar poder (sucesión casa abuelos).**
+### 💰 Planificación Financiera Urgente
+- **[x] Verificar saldo disponible:**
+  - **Presupuesto Total:** 166 EUR (130 efectivo + 36 tarjeta).
+  - **Déficit estimado:** ~39.50 EUR.
+- **[ ] (PRIORIDAD 1) Pagar gastos inaplazables:**
+  - [ ] Pagar 60 EUR (cuota ordenador).
+  - [ ] Pagar 18 EUR (coste autenticación poder en consulado).
+  - [ ] Pagar 3.50 EUR (transporte consulado).
+- **[ ] (PRIORIDAD 2) Negociar y pagar envío a Colombia:**
+  - [ ] Enviar 400.000 COP (colegio Adrián).
+  - [ ] Enviar 120.000 COP (factura y gata).
+- **[ ] Pagar 10 EUR (lavandería).**
+
+### 📈 Acciones de Ingresos y Clientes
+- **[ ] (ACCIÓN URGENTE) Fabricar y vender pulseras para cubrir déficit de ~40 EUR.**
+- **[ ] (PRIORIDAD ALTA) Contactar 1er cliente potencial (ej. Mamarrachos).**
+
+### 📋 Tareas Generales y Desarrollo
+- **[ ] Ir al consulado (Cita: Lunes 15 Dic, 11:45 am).**
 - **[ ] Actualizar anuncio de búsqueda de camarera para Yedra.**
 - **[x] Configuración de pantalla HDMI en Nobara Linux:** Problema resuelto.
 - **[ ] Refactorización y migración de danisid.com a React.**
 - **[ ] Conceptualizar tarjeta de visita digital (Marca Personal).**
 - **[ ] Diseñar paquete de servicio "Modernización con React".**
-- **[ ] Contactar 1er cliente potencial (ej. Mamarrachos).**
 - **[ ] Comprar: Pilas AA para el mouse.**
 - **[ ] Comprar: Cable HDMI más largo.**
 - **[ ] Comprar: Mando para TV Samsung (UE32J5570).**
@@ -182,9 +199,6 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto **Z
   - [ ] Cable HDMI más largo.
   - [ ] Mando para TV Samsung (UE32J5570).
 
-### 🛒 Compra Supermercado
-- **Estado:** Completado
-
 ### 🧺 Lavadora
 - **Estado:** Completado
 
@@ -225,6 +239,14 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto **Z
 ### 📊 Sistema de Actualización de Estado
 - **Estado:** Pendiente
 - **Descripción:** Implementar un sistema para registrar la "última actualización" o el "estado actual" de cada proyecto. Esto permitirá ver de un vistazo lo último que se ha hecho en cada "nodo", facilitando la toma de decisiones y la planificación estratégica.
+
+### ⚙️ Profesionalización del Flujo de Trabajo (Conventional Commits)
+- **Estado:** Pendiente
+- **Descripción:** Implementar un flujo de trabajo profesional para automatizar el versionado y la generación del changelog, basado en Conventional Commits.
+- **Subtareas:**
+  - [ ] Configurar `standard-version` para automatizar el incremento de versión y la actualización del `CHANGELOG.md`.
+  - [ ] Configurar `commitlint` para validar los mensajes de commit.
+  - [ ] Configurar `husky` para ejecutar `commitlint` antes de cada commit.
 
 ---
 

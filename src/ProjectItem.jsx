@@ -31,7 +31,7 @@ const ProjectItem = ({ project, onToggleSubTask }) => {
           {subTasks.map((task, index) => (
             <li key={index} className={`subtask-item ${task.completed ? 'task-completed' : ''}`} onClick={() => onToggleSubTask(id, index)}>
               <input type="checkbox" checked={task.completed} readOnly />
-              <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
+              <span className="checkbox-icon">{task.completed ? '⬢' : '⬡'}</span>
               <span>{task.text}</span>
             </li>
           ))}

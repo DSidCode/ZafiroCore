@@ -1,60 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Cinzel:wght@400;700&display=swap');
 
 .diario-container {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  /* Fix: Stack content vertically */
+  justify-content: flex-start;
+  align-items: center;
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 60px 20px;
   background-color: var(--background-color);
   font-family: 'Kalam', cursive;
+  background-image: radial-gradient(#1a1a2e 20%, #0f0f1a 90%);
+  /* Fondo oscuro sutil */
 }
 
 .diario-content {
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
-  background-color: #fdf5e6; /* Color papel antiguo */
-  color: #333;
-  padding: 40px;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  line-height: 1.8;
+  background-color: #fdf5e6;
+  /* Color papel antiguo */
+  background-image: url("https://www.transparenttextures.com/patterns/aged-paper.png");
+  /* Textura de papel */
+  color: #2c2c2c;
+  padding: 60px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  line-height: 1.9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de borde de papel */
+.diario-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to right, #d4af37, #fdf5e6, #d4af37);
+  opacity: 0.7;
 }
 
 .diario-content h1 {
-  font-family: 'Russo One', sans-serif;
-  color: var(--primary-color);
+  font-family: 'Cinzel', serif;
+  /* Fuente más elegante para el título */
+  color: #1a1a2e;
   text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.5em;
+  margin-bottom: 50px;
+  font-size: 3.5em;
+  /* Aumentado */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 .diario-entry {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .diario-intro {
   font-style: italic;
-  color: #555;
+  color: #444;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .diario-signature {
   text-align: center;
   font-weight: bold;
+  font-size: 1.3em;
+  margin-top: 30px;
+  color: #d4af37;
+  /* Color dorado */
+  font-family: 'Cinzel', serif;
 }
 
 .diario-separator {
   border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  margin: 20px 0 40px;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(212, 175, 55, 0), rgba(212, 175, 55, 1), rgba(212, 175, 55, 0));
+  /* Dorado desvanecido */
+  margin: 40px 0 60px;
 }
 
 .diario-date {
-  font-family: 'Russo One', sans-serif;
-  color: var(--secondary-color);
-  font-size: 1.5em;
+  font-family: 'Cinzel', serif;
+  color: #1a1a2e;
+  font-size: 2em;
+  margin-bottom: 25px;
+  border-left: 4px solid #d4af37;
+  padding-left: 15px;
+}
+
+.diario-entry p {
   margin-bottom: 20px;
+  font-size: 1.15em;
+  text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .diario-container {
+    padding: 20px 10px;
+  }
+
+  .diario-content {
+    padding: 30px 20px;
+  }
+
+  .diario-content h1 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+  }
+
+  .diario-intro {
+    font-size: 1em;
+    max-width: 100%;
+  }
+
+  .diario-date {
+    font-size: 1.5em;
+  }
+
+  .diario-entry p {
+    font-size: 1em;
+  }
+
+  .diario-signature {
+    font-size: 1.1em;
+  }
 }

@@ -1,47 +1,31 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './index.css';
-import Card from './components/Card';
 import CartaParaMama from './components/CartaParaMama';
 import DiarioParaAdrian from './components/DiarioParaAdrian'; // Asegúrate que la ruta sea correcta
 import PlanDeAccion from './components/PlanDeAccion';
-import ProjectItem from './components/ProjectItem';
 import Header from './components/Header';
+import Dashboard from './components/Dashboard';
 
 
 // --- ESTRUCTURA DE DATOS ESTRATÉGICA ---
 const initialData = {
   // Proyectos que generan ingresos directos o son la base para ello.
   incomeFocus: [
-    { id: 8, name: '📢 CyberMadrid ADS', status: 'Planificación', description: 'Plataforma marketing para vida nocturna', subTasks: [
-      { text: 'Definir servicios (cartelería, ads)', completed: false },
-      { text: 'Crear portfolio visual', completed: false },
-      { text: 'Buscar primeros clientes', completed: false },
+    { id: 301, name: '📈 ESTRATEGIA DE NEGOCIO Y MARKETING', status: 'Planificación', description: 'Definir la estrategia para captar clientes de alto valor y posicionar la marca.', subTasks: [
+      { id: 1, text: 'Definir el diferenciador clave (USP) vs. la competencia', completed: false },
+      { id: 2, text: 'Crear propuesta de valor que justifique un precio premium ("¿Por qué yo?")', completed: false },
+      { id: 3, text: 'Diseñar paquete de servicios para PYMES y emprendedores', completed: false },
+      { id: 4, text: 'Planificar campaña para Instagram/TikTok (mostrar proceso creativo)', completed: false },
+      { id: 5, text: 'Definir estrategia de contenido profesional para LinkedIn', completed: false },
+      { id: 6, text: 'Investigar y crear perfiles en plataformas freelance (Fiverr, Upwork, etc.)', completed: false }
     ]},
-    { id: 9, name: '🎪 Campaña Mamarrachos', status: 'Pendiente', description: 'Marketing QR: "Etiqueta y gana chupito"', subTasks: [
-      { text: 'Concepto definido', completed: true },
-      { text: 'Diseño carteles', completed: false },
-      { text: 'Generar QR codes', completed: false },
-    ]},
-    { id: 14, name: '💎 Proyecto Pulseras (Tienda Online)', status: 'Ideación', description: 'E-commerce de pulseras artesanales', subTasks: [
-      { text: 'Definir concepto y diseño', completed: false },
-      { text: 'Investigar plataforma e-commerce', completed: false },
-      { text: 'Crear plan de negocio', completed: false },
-    ]},
-    { id: 21, name: '🌐 Proyecto Danisid.com', status: 'En Revisión', description: 'Optimización de la web personal/profesional', subTasks: [
-      { text: 'Clarificar propuesta de valor', completed: false },
-      { text: 'Potenciar portafolio con estudios de caso', completed: false },
-      { text: 'Reforzar marca personal', completed: false },
-      { text: 'Refactorización y migración a React', completed: false },
-    ]},
-    { id: 22, name: '📄 Proyecto cv.danisid.com', status: 'En Planificación', description: 'CV online interactivo y portafolio', subTasks: [
-      { text: 'Seleccionar plataforma o tecnología', completed: false },
-      { text: 'Diseñar estructura y contenido', completed: false },
-      { text: 'Conceptualizar tarjeta de visita digital', completed: false },
-    ]},
-    { id: 23, name: '🎓 CyberClases', status: 'Ideación', description: 'Plataforma para impartir clases de tecnología', subTasks: [
-      { text: 'Definir temario y estructura', completed: false },
-      { text: 'Investigar plataformas', completed: false },
+    { id: 21, name: '🎨 PROYECTO: REDISEÑO DANISID.COM', status: 'En Revisión', description: 'Reestructuración y rediseño del portafolio para reflejar especialización en UI/UX.', subTasks: [
+      { id: 1, text: 'Revisar y aplicar feedback de "Will" para mejorar UI y comunicación', completed: false },
+      { id: 2, text: 'Definir concepto visual final (colores, tipografía, iconografía)', completed: false },
+      { id: 3, text: 'Asegurar que el diseño comunique: elegancia, creatividad y profesionalismo', completed: false },
+      { id: 4, text: 'Empezar prototipo de alta fidelidad en Figma', completed: false },
+      { id: 5, text: 'Iterar sobre el diseño visual hasta estar 100% conforme', completed: false }
     ]},
     { id: 24, name: '🎨 Proyecto El Manicomio Tattoo', status: 'Importante', description: 'Web para el estudio de tatuajes (WordPress)', subTasks: [
       { text: 'Finalizar y desplegar la web', completed: false },
@@ -104,25 +88,38 @@ const initialData = {
   ],
   // Deudas y compromisos financieros
   debts: [
-    { id: 200, name: 'Moni', amount: 40 },
+    { id: 200, name: 'Moni', amount: 20 },
     { id: 201, name: 'Dahia', amount: 20 },
     { id: 202, name: 'Oli', amount: 240 },
     { id: 203, name: 'Guille', amount: 30 },
     { id: 204, name: 'Jorge', amount: 30 },
-    { id: 205, name: 'Piri', amount: 20 },
     { id: 206, name: 'Naya', amount: 20 },
-    { id: 207, name: 'Caro Pelaez', amount: 30 },
     { id: 208, name: 'Dino y Amanda', amount: 350 },
     { id: 209, name: 'Colombia (Meta Viaje)', amount: 7000 },
     { id: 210, name: 'Jime', amount: 20 },
+    { id: 211, name: 'Sharon', amount: 10 },
+  ],
+  // Gastos fijos mensuales
+  monthlyExpenses: [
+    { id: 301, name: 'Vivienda Madrid', amount: 750, currency: 'EUR' },
+    { id: 302, name: 'Ordenador', amount: 60, currency: 'EUR', note: '17 cuotas restantes' },
+    { id: 303, name: 'Comida (promedio)', amount: 200, currency: 'EUR', note: '€50/semana' },
+    { id: 304, name: 'Ocio (promedio)', amount: 120, currency: 'EUR', note: '€30/semana' },
+    { id: 305, name: 'Ahorro (promedio)', amount: 80, currency: 'EUR', note: '€20/semana' },
+    { id: 306, name: 'Spotify', amount: 11.50, currency: 'EUR' },
+    { id: 307, name: 'Móvil', amount: 5, currency: 'EUR' },
+    { id: 308, name: 'Manutención Adrián', amount: 1000000, currency: 'COP', note: '750k - 1M' },
+    { id: 309, name: 'Salud Colombia', amount: 117000, currency: 'COP' },
+    { id: 310, name: 'Factura Horno + Laia', amount: 130000, currency: 'COP' },
+    { id: 311, name: 'Netflix', amount: 30000, currency: 'COP' },
   ]
 };
 
 const techShoppingList = {
-  id: 400, name: '🛒 COMPRAS TECNOLÓGICAS', status: 'Pendiente', subTasks: [
-    { text: 'Pilas AA para el mouse', completed: false },
-    { text: 'Cable HDMI más largo', completed: false },
-    { text: 'Mando para TV Samsung (UE32J5570)', completed: false },
+  id: 400, name: '🛒 COMPRAS', status: 'Parcial', description: 'Lista de compras tecnológicas y generales.', subTasks: [
+    { text: 'Comprar cable de red', completed: true },
+    { text: 'Comprar mando (consola/PC)', completed: false },
+    { text: 'Comprar pilas', completed: false },
   ]
 };
 
@@ -130,168 +127,19 @@ const todaysPlan = [
   {
     id: 100,
     name: '📅 PLAN DE HOY',
-    status: 'URGENTE',
+    status: 'Parcial',
+    description: 'Organización de vida y tareas pendientes.',
     subTasks: [
-      { text: 'Ir al consulado a autenticar poder (sucesión casa abuelos)', completed: false },
-      { text: 'Configuración de pantalla HDMI en Nobara Linux', completed: true },
-      { text: 'Refactorización y migración de danisid.com a React', completed: false },
-      { text: 'Conceptualizar tarjeta de visita digital (Marca Personal)', completed: false },
-      { text: 'Diseñar paquete de servicio "Modernización con React"', completed: false },
-      { text: 'Contactar 1er cliente potencial (ej. Mamarrachos)', completed: false },
-      { text: 'Comprar: Pilas AA para el mouse', completed: false },
-      { text: 'Comprar: Cable HDMI más largo', completed: false },
-      { text: 'Comprar: Mando para TV Samsung (UE32J5570)', completed: false },
+      { id: 1, text: 'Cena lista y comida preparada para mañana', completed: true },
+      { id: 2, text: 'Agendar diseño de tarjeta de boda para Juanjo', completed: false },
+      { id: 3, text: 'Deudas actualizadas: Mónica (restan 20€), Piri (pagado), Caro (pagado)', completed: true },
+      { id: 4, text: 'Reagendar cita consulado (Conectado a las 9:40 AM)', completed: false },
+      { id: 5, text: 'Organizar y estructurar la búsqueda de empleo', completed: false },
+      { id: 6, text: 'Obtener certificados oficiales: Confección Web y Administración', completed: false },
+      { id: 7, text: 'Consulado (Poder sucesión): Investigar envío post-autenticación (¿digital o físico?)', completed: false }
     ]
   }
 ];
-
-const criticalActions = [
-  '1. 💰 Abonar €40 a Mónica (URGENTE)',
-  '2. ✍️ Documentar primer pensamiento en "Antología del Alma"',
-  '2. 🇨🇴 Abonar ~€42 a cuotas familiares (Colombia)',
-  '3. 🔵 Integrar Gemini API en Zafiro',
-  '4. 💳 Diseñar tarjeta de visita digital (CyberMadrid ADS)',
-  '5. 🕒 Adaptar horario trabajo 21:00-04:00',
-  '6. 🎪 Diseñar carteles Mamarrachos',
-];
-
-const Dashboard = ({ projectsData, todayData, techShopping, handleToggleSubTask }) => {
-  const [showSettings, setShowSettings] = useState(false);
-
-  const totalDebt = projectsData.debts.reduce((acc, debt) => acc + debt.amount, 0);
-
-  // Calculate summary dynamically
-  const summary = Object.values(projectsData).flat().reduce((acc, project) => {
-    if (project.status === 'Completado') {
-      acc.completed++;
-    } else if (project.status === 'Parcial' || project.status === 'En Desarrollo' || project.status === 'En Revisión' || project.status === 'En Planificación') {
-      acc.partial++;
-    } else if (project.status) { // Any other status counts as pending
-      acc.pending++;
-    }
-    return acc;
-  }, { completed: 0, partial: 0, pending: 0 });
-
-  return (
-    <div className="container">
-      <Header />
-      <button className="settings-btn" onClick={() => setShowSettings(!showSettings)}>CONFIG</button>
-      {showSettings && (
-        <Card title="Configuración" className="ai-card">
-          <div className="settings-panel">
-            <div>
-            <p>La configuración de la API se gestionará aquí.</p>
-            <p>Tu clave se guarda localmente. No se comparte con nadie.</p>
-            </div>
-          </div>
-        </Card>
-      )}
-
-      <div className="grid" style={{ gridTemplateColumns: '1fr' }}>
-        <div className="cyber-card card urgent-card">
-          {todayData.map(p => (
-            <div key={p.id} className="project-item">
-              <div className="project-header">
-                <span className="project-title">{p.name}</span>
-                <span className="project-status" style={{backgroundColor: 'var(--urgent-red)'}}>{p.status}</span>
-              </div>
-              {p.subTasks && (
-                <ul className="subtask-list">
-                  {p.subTasks.map((task, index) => (
-                    <li key={index} className="subtask-item" onClick={() => handleToggleSubTask(p.id, index)}>
-                      <input type="checkbox" checked={task.completed} readOnly />
-                      <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
-                      <span>{task.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="triple-grid">
-        <Card title="🎯 FOCO PRINCIPAL: GENERACIÓN DE INGRESOS" className="cyber-card">
-          {projectsData.incomeFocus.map(p => <ProjectItem key={p.id} project={p} onToggleSubTask={handleToggleSubTask} />)}
-        </Card>
-
-        <Card title="🚀 PROYECTOS ESTRATÉGICOS Y CREATIVOS" className="strategic-card">
-          {projectsData.strategicProjects.map(p => <ProjectItem key={p.id} project={p} onToggleSubTask={handleToggleSubTask} />)}
-        </Card>
-
-        <Card title="⚙️ OBLIGACIONES Y MANTENIMIENTO" className="maintenance-card">
-          {projectsData.maintenance.map(p => <ProjectItem key={p.id} project={p} onToggleSubTask={handleToggleSubTask} />)}
-        </Card>
-      </div>
-
-      <div className="triple-grid">
-        <Card title="🌱 DESARROLLO Y OCIO" className="event-card">
-          {projectsData.developmentAndLeisure.map(p => <ProjectItem key={p.id} project={p} onToggleSubTask={handleToggleSubTask} />)}
-        </Card>
-
-        <Card title="💸 DEUDAS Y PRÉSTAMOS" className="debts-card">
-          {projectsData.debts.map(d => (
-            <div key={d.id} className="debt-item">
-              <span>{d.name}</span>
-              <span className="debt-amount">€{d.amount.toLocaleString('es-ES')}</span>
-            </div>
-          ))}
-          <div className="debt-total">
-            <span>TOTAL</span>
-            <span>€{totalDebt.toLocaleString('es-ES')}</span>
-          </div>
-        </Card>
-
-        <Card title="📊 RESUMEN ESTADO ACTUAL">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '15px', textAlign: 'center' }}>
-            <div>
-              <div style={{ fontSize: '2em', color: 'var(--completed)' }}>{summary.completed}</div>
-              <div>Completados</div>
-            </div>
-            <div>
-              <div style={{ fontSize: '2em', color: 'var(--partial)' }}>{summary.partial}</div>
-              <div>Parciales</div>
-            </div>
-            <div>
-              <div style={{ fontSize: '2em', color: 'var(--pending)' }}>{summary.pending}</div>
-              <div>Pendientes</div>
-            </div>
-          </div>
-        </Card>
-      </div>
-
-      <div className="grid">
-        <Card title={techShopping.name} className="shopping-card">
-          <div className="project-item">
-              {techShopping.subTasks && (
-                <ul className="subtask-list">
-                  {techShopping.subTasks.map((task, index) => (
-                    <li key={index} className="subtask-item" onClick={() => handleToggleSubTask(techShopping.id, index)}>
-                      <input type="checkbox" checked={task.completed} readOnly />
-                      <span className="checkbox-icon">{task.completed ? '■' : '□'}</span>
-                      <span>{task.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-        </Card>
-      </div>
-
-
-
-      <div className="grid">
-        <div className="cyber-card card">
-            <h3>🎯 PRÓXIMAS ACCIONES CRÍTICAS</h3>
-            <div className="task-list">
-              {criticalActions.map((action, index) => <div key={index} className="task-item">{action}</div>)}
-            </div>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const App = () => {
   const [projectsData, setProjectsData] = useState(initialData);
@@ -360,12 +208,15 @@ const App = () => {
   };
 
   return (
-    <Routes>
-      <Route path="/" element={<Dashboard projectsData={projectsData} todayData={todayData} techShopping={techShopping} handleToggleSubTask={handleToggleSubTask} />} />
-      <Route path="/plan-de-accion" element={<PlanDeAccion />} />
-      <Route path="/carta-a-mama" element={<CartaParaMama />} />
-      <Route path="/diario-para-adrian" element={<DiarioParaAdrian />} />
-    </Routes>
+    <div className="app-container">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Dashboard projectsData={projectsData} todayData={todayData} techShopping={techShopping} handleToggleSubTask={handleToggleSubTask} />} />
+        <Route path="/plan-de-accion" element={<PlanDeAccion />} />
+        <Route path="/carta-a-mama" element={<CartaParaMama />} />
+        <Route path="/diario-para-adrian" element={<DiarioParaAdrian />} />
+      </Routes>
+    </div>
   );
 }
 

@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog.
 
+## [1.8.0] - 2025-12-14
+
+### Added
+- **Módulo de Estrategia Financiera Dinámica**: La sección de finanzas en `tareas.md` ha evolucionado de una simple lista a un módulo estratégico. Ahora incluye cálculo de presupuesto total, identificación de déficit y un plan de acción priorizado para cubrir los gastos.
+
+### Changed
+- **Priorización de Tareas Basada en Análisis**: Se ha implementado un sistema de toma de decisiones que analiza múltiples fuentes de ingresos (hostelería, artesanía, desarrollo web) y las prioriza en función de su alineación con los objetivos a largo plazo (libertad financiera, carrera tecnológica), en lugar de solo la urgencia. La tarea de "fabricar pulseras" se ha elevado a "ACCIÓN URGENTE" como resultado de este análisis para cubrir un déficit financiero.
+
 ## [1.7.0] - 2025-11-14
 
 ### Added

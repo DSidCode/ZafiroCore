@@ -4,8 +4,8 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto **Z
 
 ---
 
-## 📅 PLAN DE HOY (Actualizado 14 Dic, 22:35)
-*Acciones que requieren atención inmediata para desbloquear el trabajo o resolver problemas críticos.*
+## 📅 PLAN DE HOY (Actualizado 20 Ene 2026, 05:15 AM)
+*Enfoque: Madrugada de estrategia, corrección de rumbo en Danisid.com y búsqueda de liquidez inmediata.*
 
 ### 💰 Planificación Financiera Urgente
 - **[x] Verificar saldo disponible:**
@@ -13,27 +13,39 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto **Z
   - **Déficit estimado:** ~39.50 EUR.
 - **[ ] (PRIORIDAD 1) Pagar gastos inaplazables:**
   - [ ] Pagar 60 EUR (cuota ordenador).
-  - [ ] Pagar 18 EUR (coste autenticación poder en consulado).
-  - [ ] Pagar 3.50 EUR (transporte consulado).
 - **[ ] (PRIORIDAD 2) Negociar y pagar envío a Colombia:**
   - [ ] Enviar 400.000 COP (colegio Adrián).
   - [ ] Enviar 120.000 COP (factura y gata).
 - **[ ] Pagar 10 EUR (lavandería).**
+### 🚨 URGENCIA FINANCIERA (Generar Cashflow YA)
+- **[ ] Ejecutar Micro-Servicio: "CV UI/UX Booster" (Meta: 2 clientes hoy = 40€):**
+  - **Paso 1 (Producto):** Coger un CV feo (o lorem ipsum) y maquetarlo limpio, moderno y legible en Figma/Canva.
+  - **Paso 1.5 (Marca):** Crear Instagram **@QuimeraLab** (o similar corto). Bio: "UI/UX & Digital Alchemist".
+  - **Paso 2 (Marketing):** Subir imagen "Antes/Después" a WhatsApp/Instagram.
+  - **Copy:** *"¿Tu CV no pasa filtros? Como diseñador UI/UX, lo reestructuro para que los reclutadores lo lean en 6 segundos. Solo tengo 2 huecos hoy antes de mi turno. 20€."*
+  - **Paso 3 (Venta):** Cobro por Bizum adelantado. Entrega en PDF.
 
 ### 📈 Acciones de Ingresos y Clientes
 - **[ ] (ACCIÓN URGENTE) Fabricar y vender pulseras para cubrir déficit de ~40 EUR.**
 - **[ ] (PRIORIDAD ALTA) Contactar 1er cliente potencial (ej. Mamarrachos).**
+### 💻 Sesión de Madrugada (En Curso: danisid.com)
+- **[x] Escribir y clarificar ideas (Journaling).**
+- **[ ] Refactorización `danisid.com`:**
+  - **Estado:** 🔄 En Proceso (Prioridad Actual).
+  - [ ] Actualizar lista de tareas del sitio (hacerlo vendible).
+  - [ ] Definir "Producto Mínimo Viable" para mostrar a clientes ya.
 
 ### 📋 Tareas Generales y Desarrollo
-- **[ ] Ir al consulado (Cita: Lunes 15 Dic, 11:45 am).**
-- **[ ] Actualizar anuncio de búsqueda de camarera para Yedra.**
 - **[x] Configuración de pantalla HDMI en Nobara Linux:** Problema resuelto.
-- **[ ] Refactorización y migración de danisid.com a React.**
+- **[ ] Comprar: Pilas AA para el mouse.** (Necesario para trabajar cómodo).
+- **[ ] Refactorización y migración de danisid.com a React.** (En proceso).
 - **[ ] Conceptualizar tarjeta de visita digital (Marca Personal).**
 - **[ ] Diseñar paquete de servicio "Modernización con React".**
-- **[ ] Comprar: Pilas AA para el mouse.**
 - **[ ] Comprar: Cable HDMI más largo.**
 - **[ ] Comprar: Mando para TV Samsung (UE32J5570).**
+### 📋 Rutina y Obligaciones
+- **[ ] Descansar antes del turno:** (Vital para aguantar la noche).
+- **[ ] Trabajo Nocturno:** 21:00 - 04:00.
 
 ---
 
@@ -74,7 +86,7 @@ Este documento sirve como guía maestra y registro de ideas para el proyecto **Z
   - [ ] Crear plan de negocio y marketing.
 
 ### 🌐 Proyecto Danisid.com
-- **Estado:** En Revisión
+- **Estado:** 🔄 En Proceso (Prioridad Madrugada)
 - **Descripción:** Optimización de la web personal/profesional para generación de leads y clientes.
 - **Ruta Local:** `/home/sidzcool/DaniSidCode/danisid.com`
 - **Subtareas:**

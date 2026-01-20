@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on Keep a Changelog.
 
+## [1.9.0] - 2026-01-20
+
+### Changed
+- **Estrategia de Emergencia (Cashflow):** Se ha pivotado el plan diario hacia la generación inmediata de liquidez mediante micro-servicios de diseño.
+- **Nueva Marca (QuimeraLab):** Definición de la identidad para servicios freelance rápidos de UI/UX.
+- **Actualización de Prioridades:** "Danisid.com" y "Ventas Rápidas" pasan a ser la prioridad absoluta.
+
 ## [1.8.0] - 2025-12-14
 
 ### Added

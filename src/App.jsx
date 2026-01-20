@@ -119,24 +119,24 @@ const techShoppingList = {
   id: 400, name: '🛒 COMPRAS', status: 'Parcial', description: 'Lista de compras tecnológicas y generales.', subTasks: [
     { text: 'Comprar cable de red', completed: true },
     { text: 'Comprar mando (consola/PC)', completed: false },
-    { text: 'Comprar pilas', completed: false },
+    { text: 'Comprar pilas AA (Mouse)', completed: false },
   ]
 };
 
 const todaysPlan = [
   {
     id: 100,
-    name: '📅 PLAN DE HOY',
-    status: 'Parcial',
-    description: 'Organización de vida y tareas pendientes.',
+    name: '📅 PLAN DE HOY (20 Ene)',
+    status: 'Urgente',
+    description: 'Madrugada de estrategia, danisid.com y liquidez inmediata.',
     subTasks: [
-      { id: 1, text: 'Cena lista y comida preparada para mañana', completed: true },
-      { id: 2, text: 'Agendar diseño de tarjeta de boda para Juanjo', completed: false },
-      { id: 3, text: 'Deudas actualizadas: Mónica (restan 20€), Piri (pagado), Caro (pagado)', completed: true },
-      { id: 4, text: 'Reagendar cita consulado (Conectado a las 9:40 AM)', completed: false },
-      { id: 5, text: 'Organizar y estructurar la búsqueda de empleo', completed: false },
-      { id: 6, text: 'Obtener certificados oficiales: Confección Web y Administración', completed: false },
-      { id: 7, text: 'Consulado (Poder sucesión): Investigar envío post-autenticación (¿digital o físico?)', completed: false }
+      { id: 1, text: 'Verificar saldo (Déficit ~40€) - HECHO', completed: true },
+      { id: 2, text: '🎨 Crear imagen "Antes vs Después" (Gancho Visual)', completed: false },
+      { id: 3, text: '📸 Crear IG "QuimeraLab" y lanzar oferta (Repost personal)', completed: false },
+      { id: 4, text: 'Refactorización danisid.com (MVP)', completed: false },
+      { id: 5, text: 'Pagar gastos inaplazables (Ordenador)', completed: false },
+      { id: 6, text: 'Comprar pilas AA para el mouse', completed: false },
+      { id: 7, text: 'Descansar antes del turno (21:00)', completed: false }
     ]
   }
 ];
